@@ -9,7 +9,7 @@ export default defineConfig({
     proxy: {
       // Dev proxy — all /api/* requests are forwarded to the local backend
       '/api': {
-        target: 'http://localhost:5000',
+        target: 'https://real-estate-app-1-h2v7.onrender.com',
         changeOrigin: true,
       },
     },
