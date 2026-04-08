@@ -23,9 +23,10 @@ export default defineConfig({
     rollupOptions: {
       output: {
         // Split vendor code into a separate chunk for better caching
-        manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
-          http:   ['axios'],
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return 'vendor';
+          }
         },
       },
     },

@@ -4,8 +4,8 @@ import axios from 'axios';
 // Development:  uses Vite proxy → requests to /api are proxied to localhost:5000
 // Production:   set VITE_API_URL=https://your-backend.onrender.com/api in Vercel env vars
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || '/api',
-  timeout: 15000, // 15 s — Render free tier can be slow on cold start
+  baseURL: "https://real-estate-app-tp3i.onrender.com/api",
+  timeout: 15000,
 });
 
 // ── Request interceptor ───────────────────────────────────────────────────────
